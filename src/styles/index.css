@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #112f56;
+  --secondary-color: #bee1ff;
+  --light-color: #fafafc;
+  --color-gray: #727171da;
+  --light-color-blue: #ecf4fb;
+  --light-color-gray: #bccae4;
+}
+@font-face {
+  font-family: 'Ubunto';
+  src: url('/src/assets/fonts/Ubuntu-Bold.ttf') format(truetype);
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Ubunto';
+  src: url('/src/assets/fonts/Ubuntu-Medium.ttf') format(truetype);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Ubunto';
+  src: url('/src/assets/fonts/Ubuntu-Regular.ttf') format(truetype);
+  font-weight: normal;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubunto', sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  background-color: #eef5ff;
+}
+@media (max-width: 62em) {
+  .app {
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    padding: 1em;
+  }
+  .mobile {
+    display: grid;
+  }
+  .navBar {
+    display: none;
+  }
+  .active::before {
+    content: counter(mobile);
+    counter-increment: mobile;
+    width: 40px;
+    height: 40px;
+    left: -5vw;
+    top: -50px;
+  }
+  .main {
+    width: 100%;
+  }
+  .plans {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  .category {
+    display: flex;
+    gap: 1em;
+  }
+}

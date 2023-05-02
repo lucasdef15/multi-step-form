@@ -1,0 +1,25 @@
+.plans {
+  display: flex;
+  gap: 1.3vw;
+  margin: 2.5vw 0;
+}
+.category {
+  border: 2px solid var(--light-color-gray);
+  flex: 1 0 0;
+  padding: 1em;
+  border-radius: 0.5em;
+  display: grid;
+  gap: 3vw;
+  cursor: pointer;
+}
+.category_body {
+  display: grid;
+  gap: 0.3vw;
+}
+.category_body h4 {
+  font-weight: bold;
+}
+.blue {
+  color: var(--primary-color) !important;
+  font-weight: normal;
+}
