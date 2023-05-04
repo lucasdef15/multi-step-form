@@ -1,17 +1,20 @@
 .app {
   width: 60%;
-  height: 80vh;
+  height: 100%;
+  max-width: max(950px, 1200px);
+  min-height: 570px;
   margin: 0 auto;
-  padding: 1vw;
+  padding: 1vmin;
   display: flex;
-  gap: 5vmax;
+  gap: 6vw;
   background-color: #ffffff;
   border-radius: 0.8em;
   box-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.09);
   z-index: 50;
 }
 .main {
-  width: 55%;
+  width: 50%;
+  /* background-color: rgba(0, 0, 255, 0.322); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,9 +28,10 @@
 }
 .main_content h2 {
   font-size: 2rem;
-  margin-top: 1.5vmax;
+  margin-top: 1.5vmin;
   margin-bottom: 0.4em;
 }
-.main_content p {
+.space {
   color: var(--color-gray);
+  margin-bottom: 2vmin;
 }

@@ -1,16 +1,19 @@
 .plans {
   display: flex;
-  gap: 1.3vw;
+  gap: 1vw;
   margin: 2.5vw 0;
 }
 .category {
-  border: 2px solid var(--light-color-gray);
+  border: 1px solid var(--light-color-gray);
   flex: 1 0 0;
   padding: 1em;
   border-radius: 0.5em;
   display: grid;
-  gap: 3vw;
+  gap: 2.7vw;
   cursor: pointer;
+}
+.category:hover{
+  border: 1px solid var(--primary-color) !important;
 }
 .category_body {
   display: grid;
@@ -22,4 +25,7 @@
 .blue {
   color: var(--primary-color) !important;
   font-weight: normal;
+}
+.payment{
+  color: var(--color-gray);
 }

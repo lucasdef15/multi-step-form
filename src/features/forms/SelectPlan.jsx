@@ -22,7 +22,7 @@ export default function SelectPlan() {
   return (
     <section className='main_content'>
       <h2>Select your plan</h2>
-      <p>You have the option of monthly or yearly billing</p>
+      <p className='space'>You have the option of monthly or yearly billing</p>
 
       <Plans
         plans={plans}

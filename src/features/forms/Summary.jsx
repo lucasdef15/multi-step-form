@@ -47,7 +47,9 @@ export default function Summary() {
   return (
     <section className='main_content'>
       <h2>Finishing up</h2>
-      <p>Double-check everything looks OK before cofirming.</p>
+      <p className='space'>
+        Double-check everything looks OK before cofirming.
+      </p>
       {renderPlan()}
       {renderAddOnd()}
     </section>

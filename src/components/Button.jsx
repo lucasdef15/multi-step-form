@@ -4,6 +4,7 @@ import '../styles/Button.css';
 
 export default function Button() {
   const [isFirstPage, setIsFirstPage] = useState(false);
+  const [isLastPage, setIsLastPage] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -11,7 +12,10 @@ export default function Button() {
   useEffect(() => {
     if (location.pathname === '/') {
       setIsFirstPage(true);
+    } else if (location.pathname === '/summary') {
+      setIsLastPage(true);
     } else {
+      setIsLastPage(false);
       setIsFirstPage(false);
     }
   }, [location]);
@@ -42,8 +46,8 @@ export default function Button() {
       >
         Go Back
       </button>
-      <button className='btn' onClick={goNext}>
-        Next Step
+      <button className={isLastPage ? 'btn submit' : 'btn'} onClick={goNext}>
+        {isLastPage ? 'Confimr' : 'Next Step'}
       </button>
     </section>
   );

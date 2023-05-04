@@ -23,20 +23,9 @@ export default function AddOnsForm() {
   return (
     <section className='main_content'>
       <h2>Pick add-ons</h2>
-      <p>Add-ons help enhance your gaming experience.</p>
-      <section>
-        {addOns.map((addOn, index) => {
-          return (
-            <AddOns
-              key={addOn.service}
-              addOn={addOn}
-              payment={payment}
-              onChangeCheck={() => onChangeCheck(index, addOn.id)}
-              checked={addOn.selected}
-            />
-          );
-        })}
-      </section>
+      <p className='space'>Add-ons help enhance your gaming experience.</p>
+
+      <AddOns addOns={addOns} payment={payment} onChangeCheck={onChangeCheck} />
     </section>
   );
 }

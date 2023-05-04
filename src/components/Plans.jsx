@@ -8,7 +8,10 @@ export default function Plan({ plans, handlePlanClick, payment }) {
           key={plan.category}
           className='category'
           onClick={() => handlePlanClick(plan)}
-          style={{ borderColor: plan.selected ? '#112f56' : '#e3e1ef' }}
+          style={{
+            borderColor: plan.selected ? '#112f56' : '#e3e1ef',
+            background: plan.selected ? '#112f5610' : null,
+          }}
         >
           <img src={plan.img} className='icon' />
           <div className='category_body'>

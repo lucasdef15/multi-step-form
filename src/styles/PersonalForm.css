@@ -1,17 +1,23 @@
 .personal-form {
   width: 100%;
-  height: 80%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
-  margin-top: 3em;
 }
-input {
+.personal-form input {
   width: 100%;
-  height: 12%;
   font-size: 1.1rem;
+  font-weight: 600;
   border-radius: 0.5em;
+  outline: none;
   border: 1px solid var(--light-color-gray);
-  padding-left: 1em;
-  margin-bottom: 1.35em;
-  margin-top: 0.4em;
+  padding: .6em 1em;
+  margin-bottom: 1em;
+  margin-top: 0.3em;
+}
+
+.personal-input:focus,
+.personal-input:focus-visible,
+.personal-input:focus-within {
+  outline: 1px solid var(--primary-color);
 }

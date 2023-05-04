@@ -3,7 +3,7 @@
   --secondary-color: #bee1ff;
   --light-color: #fafafc;
   --color-gray: #727171da;
-  --light-color-blue: #ecf4fb;
+  --light-color-blue: #112f5610;
   --light-color-gray: #bccae4;
 }
 @font-face {
@@ -41,8 +41,14 @@ body {
   display: flex;
   place-items: center;
   background-color: #eef5ff;
+  overflow-y: scroll;
 }
-@media (max-width: 62em) {
+@media (max-width: 70em) {
+  /* .app{
+    gap: 4vmin;
+  } */
+}
+@media (max-width: 55em) {
   .app {
     flex-direction: column;
     width: 90%;
@@ -74,5 +80,8 @@ body {
   .category {
     display: flex;
     gap: 1em;
+  }
+  .buttons{
+    display: none;
   }
 }
