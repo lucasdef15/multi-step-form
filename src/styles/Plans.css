@@ -1,7 +1,7 @@
 .plans {
   display: flex;
-  gap: 1vw;
-  margin: 2.5vw 0;
+  gap: .8em;
+  margin: 2em 0;
 }
 .category {
   border: 1px solid var(--light-color-gray);

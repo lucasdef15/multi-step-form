@@ -1,20 +1,20 @@
 .app {
   width: 60%;
-  height: 100%;
-  max-width: max(950px, 1200px);
-  min-height: 570px;
+  height: 80vh;
+  max-width: 900px;
+  max-height: 650px;
+  min-height: 550px;
   margin: 0 auto;
-  padding: 1vmin;
+  padding: 1em;
   display: flex;
-  gap: 6vw;
+  gap: 1em;
   background-color: #ffffff;
   border-radius: 0.8em;
   box-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.09);
   z-index: 50;
 }
 .main {
-  width: 50%;
-  /* background-color: rgba(0, 0, 255, 0.322); */
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,16 +22,18 @@
   z-index: 100;
 }
 .main_content {
-  width: 100%;
+  width: 75%;
   height: 85%;
   color: var(--primary-color);
 }
 .main_content h2 {
-  font-size: 2rem;
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
   margin-top: 1.5vmin;
   margin-bottom: 0.4em;
 }
 .space {
   color: var(--color-gray);
   margin-bottom: 2vmin;
+  font-size: 1rem;
+  /* font-size: clamp(0.8rem, 1vw, 1rem); */
 }

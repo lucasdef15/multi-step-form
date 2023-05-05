@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import '../styles/Button.css';
 
-export default function Button() {
+export default function ButtonsMobile() {
   const [isFirstPage, setIsFirstPage] = useState(false);
   const [isLastPage, setIsLastPage] = useState(false);
   const [isThanksPage, setIsThanksPage] = useState(false);
@@ -47,7 +47,7 @@ export default function Button() {
 
   return (
     <section
-      className='buttons'
+      className='buttonsMobile'
       style={{
         justifyContent: isFirstPage ? 'flex-end' : 'space-between',
         display: isThanksPage ? 'none' : null,

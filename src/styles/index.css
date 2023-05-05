@@ -2,23 +2,23 @@
   --primary-color: #112f56;
   --secondary-color: #bee1ff;
   --light-color: #fafafc;
-  --color-gray: #727171da;
+  --color-gray: #7271718a;
   --light-color-blue: #112f5610;
   --light-color-gray: #bccae4;
 }
 @font-face {
-  font-family: 'Ubunto';
-  src: url('/src/assets/fonts/Ubuntu-Bold.ttf') format(truetype);
+  font-family: "Ubunto";
+  src: url("/src/assets/fonts/Ubuntu-Bold.ttf") format(truetype);
   font-weight: bold;
 }
 @font-face {
-  font-family: 'Ubunto';
-  src: url('/src/assets/fonts/Ubuntu-Medium.ttf') format(truetype);
+  font-family: "Ubunto";
+  src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format(truetype);
   font-weight: 600;
 }
 @font-face {
-  font-family: 'Ubunto';
-  src: url('/src/assets/fonts/Ubuntu-Regular.ttf') format(truetype);
+  font-family: "Ubunto";
+  src: url("/src/assets/fonts/Ubuntu-Regular.ttf") format(truetype);
   font-weight: normal;
 }
 *,
@@ -27,7 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubunto', sans-serif;
+  font-family: "Ubunto", sans-serif;
 }
 
 body {
@@ -41,36 +41,85 @@ body {
   display: flex;
   place-items: center;
   background-color: #eef5ff;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 @media (max-width: 70em) {
-  /* .app{
-    gap: 4vmin;
-  } */
-}
-@media (max-width: 55em) {
   .app {
+    width: 80%;
+    padding: 0.5em;
+  }
+  .main {
+    width: 100%;
+  }
+  .navBar {
+    padding-left: 4.5vw;
+  }
+  .steps {
+    margin-left: 15%;
+  }
+}
+@media (max-width: 50em) {
+  .app {
+    gap: 0;
+  }
+  .plans {
+    display: flex;
     flex-direction: column;
+  }
+  .category {
+    display: flex;
+  }
+  .main_content {
     width: 90%;
     height: 100%;
+    padding-bottom: 2em;
+    overflow-x: hidden;
+  }
+  .buttons {
+    width: 90%;
+  }
+  .addOn {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  img{
+    display: block;
+    width: 45px;
+  }
+}
+@media (max-width: 40em) {
+  #root {
+    display: grid;
+    place-content: center;
+  }
+  .app {
+    margin: 20%;
+    flex-direction: column;
+    width: 92%;
+    height: auto;
+    min-height: 500px;
     padding: 1em;
+    /* margin-bottom: 7em; */
   }
   .mobile {
-    display: grid;
+    display: flex;
   }
   .navBar {
     display: none;
   }
-  .active::before {
+  /* .active::before {
     content: counter(mobile);
     counter-increment: mobile;
     width: 40px;
     height: 40px;
     left: -5vw;
     top: -50px;
-  }
+  } */
   .main {
     width: 100%;
+  }
+  .main_content {
+    height: auto;
   }
   .plans {
     display: flex;
@@ -81,7 +130,15 @@ body {
     display: flex;
     gap: 1em;
   }
-  .buttons{
+  .buttons {
     display: none;
   }
+  .buttonsMobile {
+    z-index: 200;
+  }
+  .addOn {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
 }

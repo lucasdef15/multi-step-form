@@ -2,46 +2,83 @@
 import { selectAllPlans, selectPayment, selectAllAddOns } from './formsSlice';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import '../../styles/Summary.css';
 
 export default function Summary() {
   const plans = useSelector(selectAllPlans);
   const payment = useSelector(selectPayment);
   const addOns = useSelector(selectAllAddOns);
 
-  function renderPlan() {
-    let planContent = plans.find((plan) => plan.selected === true);
+  let planContent = plans.find((plan) => plan.selected === true);
+  let addOnContent = addOns.filter((addOn) => addOn.selected === true);
 
-    if (planContent === undefined) {
-      return null; // add a component to say that you havent yet chosen a plan
+  function renderPlan() {
+    if (planContent === undefined && addOnContent.length === 0) {
+      return (
+        <div>
+          <h2 style={{ fontSize: '1rem', color: 'tomato' }}>
+            Please select a plan
+          </h2>
+        </div>
+      );
+    } else if (planContent === undefined) {
+      return (
+        <div>
+          <h2 style={{ fontSize: '1rem', color: 'tomato' }}>
+            Please select a plan
+          </h2>
+        </div>
+      );
+    } else {
+      return (
+        <div className='plan_summary'>
+          <div>
+            <h4>{`${planContent.category} (${
+              payment ? 'Yearly' : 'Monthly'
+            })`}</h4>
+            <Link to='/select-plan'>Change</Link>
+          </div>
+          <div>
+            <p>{`$${planContent.price}/${payment ? 'yr' : 'mo'}`}</p>
+          </div>
+        </div>
+      );
     }
-    return (
-      <div className='category_body'>
-        <h4>{`${planContent.category} (${payment ? 'Yearly' : 'Monthly'})`}</h4>
-        <Link to='/select-plan'>Change</Link>
-        <p className='payment'>{`$${planContent.price}/${
-          payment ? 'yr' : 'mo'
-        }`}</p>
-      </div>
-    );
   }
 
   function renderAddOnd() {
-    let addOnContent = addOns.filter((addOn) => addOn.selected === true);
-
     if (addOnContent === null) {
       return null;
     }
 
     return addOnContent.map((addOn) => {
       return (
-        <div key={addOn.id}>
-          <p>{addOn.service}</p>
-          <p className='payment'>{`$${addOn.price}/${
-            payment ? 'yr' : 'mo'
-          }`}</p>
+        <div key={addOn.id} className='addOn-summary'>
+          <h5>{addOn.service}</h5>
+          <p>{`+$${addOn.price}/${payment ? 'yr' : 'mo'}`}</p>
         </div>
       );
     });
+  }
+
+  function renderTotal() {
+    let totalAddOns = 0;
+    let totalPlan = 0;
+    if (addOnContent.length !== 0) {
+      totalAddOns = addOnContent
+        .map((addOn) => addOn.price)
+        .reduce((acc, cur) => acc + cur);
+    }
+    if (planContent !== undefined) {
+      totalPlan = planContent.price;
+    }
+
+    return (
+      <div className='total-summary'>
+        <h6>{`Total ${payment ? '(per year)' : '(per month)'}`}</h6>
+        <p>{`+$${totalAddOns + totalPlan}/${payment ? 'yr' : 'mo'}`}</p>
+      </div>
+    );
   }
 
   return (
@@ -50,8 +87,11 @@ export default function Summary() {
       <p className='space'>
         Double-check everything looks OK before cofirming.
       </p>
-      {renderPlan()}
-      {renderAddOnd()}
+      <section className='summary'>
+        {renderPlan()}
+        {renderAddOnd()}
+      </section>
+      {renderTotal()}
     </section>
   );
 }

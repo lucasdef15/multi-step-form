@@ -1,30 +1,46 @@
-.addOn-wrapper{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 3em;
+.addOn-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-top: 2.2em;
 }
-.addOn{
-    border: 1px solid var(--primary-color);
-    flex: 1 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5em 1.5em;
-    border-radius: .5em;
+.addOn {
+  border: 1px solid var(--light-color-gray);
+  font-size: clamp(0.756rem, 1vw, 1rem);
+  flex: 1 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 1.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
-
+.addOn:hover {
+  border: 1px solid var(--primary-color);
+}
 .addOn form {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 3vmin;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3vmin;
 }
-.addOn-body{
-    display: flex;
-    flex-direction: column;
+.addOn-body {
+  display: flex;
+  gap: 0.1em;
+  flex-direction: column;
+}
+.addOn-title {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+.addOn-description {
+  color: var(--color-gray);
+}
+.addOn-payment {
+  color: #463ced;
 }
 .addOn input[type="checkbox"] {
   /* Hide the default checkbox */
@@ -35,18 +51,17 @@
   width: 20px;
   height: 20px;
   border: 1px solid var(--light-color-gray);
-  
-  border-radius: .4em;
+  border-radius: 0.4em;
   cursor: pointer;
   display: grid;
   place-content: center;
 }
 .addOn input[type="checkbox"]:after {
-  font-family: 'Font Awesome 6 Free';
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  content: '\f00c';
+  content: "\f00c";
   color: var(--light-color);
-  font-size: 1rem;
+  font-size: 0.8rem;
   display: none;
 }
 .addOn input[type="checkbox"]:checked {
