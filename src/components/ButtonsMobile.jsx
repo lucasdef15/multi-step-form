@@ -11,20 +11,27 @@ export default function ButtonsMobile() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (location.pathname === '/') {
-      setIsFirstPage(true);
-      setIsThanksPage(false);
-    } else if (location.pathname === '/summary') {
-      setIsLastPage(true);
-      setIsThanksPage(false);
-      setIsFirstPage(false);
-    } else if (location.pathname === '/thanks-page') {
-      setIsThanksPage(true);
-    } else {
-      setIsLastPage(false);
-      setIsFirstPage(false);
-      setIsThanksPage(false);
-    }
+    switch (location.pathname) {
+      case '/':
+        setIsFirstPage(true);
+        setIsThanksPage(false);
+        setIsLastPage(false);
+        break;
+      case '/summary':
+        setIsLastPage(true);
+        setIsThanksPage(false);
+        setIsFirstPage(false);
+        break;
+      case '/thanks-page':
+        setIsThanksPage(true);
+        setIsLastPage(false);
+        setIsFirstPage(false);
+        break;
+      default:
+        setIsLastPage(false);
+        setIsFirstPage(false);
+        setIsThanksPage(false);
+    }    
   }, [location]);
 
   const goBack = () => {

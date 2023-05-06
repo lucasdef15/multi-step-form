@@ -17,12 +17,12 @@ import RootLayout from './layouts/RootLayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<RootLayout />}>
+    <Route path="/" element={<RootLayout />}>
       <Route index element={<PersonalForm />} />
-      <Route path='select-plan' element={<SelectPlan />} />
-      <Route path='add-ons' element={<AddOnsForm />} />
-      <Route path='summary' element={<Summary />} />
-      <Route path='thanks-page' element={<ThanksPage />} />
+      <Route path="select-plan" element={<SelectPlan />} />
+      <Route path="add-ons" element={<AddOnsForm />} />
+      <Route path="summary" element={<Summary />} />
+      <Route path="thanks-page" element={<ThanksPage />} />
     </Route>
   )
 );
