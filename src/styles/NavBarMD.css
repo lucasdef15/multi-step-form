@@ -2,17 +2,18 @@
   margin-left: 30%;
 }
 .navBar {
-  width: 30%;
-  min-width: 220px;
-  border-radius: 1em;
+  width: 35vw;
+  max-width: 300px;
+  border-radius: .7em;
   background-image: url(../assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: grid;
-  padding-top: 2rem;
+  display: none;
+  padding-top: 1.5rem;
 }
 .navBar ol {
+  width: 100%;
   list-style: none;
   counter-reset: desktop;
   padding: 1em;
@@ -22,9 +23,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  margin-bottom: 1.5rem;
-  color: var(--secondary-color);
-  font-size: clamp(0.8rem, 1vw, 1.12rem);
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.405);
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-weight: normal;
 }
 .navLink {
   position: relative;
@@ -38,7 +40,7 @@
   counter-increment: desktop;
   position: absolute;
   color: var(--light-color);
-  font-size: clamp(0.75rem, 1vw, 1.2rem);
+  font-size: clamp(0.8rem, 1vw, 1.12rem);
   font-weight: 600;
   background-color: transparent;
   width: 35px;
@@ -50,59 +52,6 @@
   left: -3.2rem;
   top: -20px;
 }
-.mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 30%;
-  background-image: url(../assets/images/bg-sidebar-mobile.svg);
-  gap: 1.5em;
-  padding-top: 6.5vmax;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 82%;
-  background-size: cover;
-  justify-content: center;
-  z-index: 1;
-}
-/* .mobile ol {
-  list-style: none;
-  counter-reset: mobile;
-  display: flex;
-  gap: 3.5em;
-} */
-.navLink_mobile {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--light-color);
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  /* background-color: red; */
-  color: var(--light-color);
-  font-weight: 600;
-  text-decoration: none;
-}
-/* .navLink_mobile::before {
-  content: counter(mobile);
-  counter-increment: mobile;
-  position: absolute;
-  color: var(--light-color);
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: transparent;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid var(--light-color);
-  display: grid;
-  place-content: center;
-  left: 27vw;
-  top: -4vmax;
-  margin-bottom: 10%;
-} */
-
 .active {
   position: relative;
 }
@@ -111,15 +60,11 @@
   counter-increment: desktop;
   position: absolute;
   color: var(--primary-color);
-  font-size: clamp(0.75rem, 1vw, 1.2rem);
+  font-size: clamp(0.8rem, 1vw, 1.12rem);
   font-weight: 600;
   background-color: var(--secondary-color);
   width: 35px;
   height: 35px;
-  /* width: 3vmax;
-  height: 3vmax;
-  max-width: 35px;
-  max-height: 35px; */
   border-radius: 50%;
   border: 1px solid var(--light-color);
   display: grid;
@@ -127,3 +72,41 @@
   left: -3.2rem;
   top: -20px;
 }
+
+/* Navlink mobile */
+.mobile {
+  display: flex;
+  gap: 1em;
+  margin-top: 8%;
+}
+.background-mobile{
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.navLink_mobile {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 2;
+}
+.active_mobile {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--light-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 2;
+}
+

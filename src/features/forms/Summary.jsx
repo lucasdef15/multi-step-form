@@ -83,10 +83,12 @@ export default function Summary() {
 
   return (
     <section className='main_content'>
-      <h2>Finishing up</h2>
-      <p className='space'>
-        Double-check everything looks OK before cofirming.
-      </p>
+      <div>
+        <h2>Finishing up</h2>
+        <p className='space'>
+          Double-check everything looks OK before cofirming.
+        </p>
+      </div>
       <section className='summary'>
         {renderPlan()}
         {renderAddOnd()}

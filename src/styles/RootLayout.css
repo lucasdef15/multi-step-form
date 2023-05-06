@@ -1,39 +1,48 @@
+.container{
+  width: 100%;
+  /* height: 50vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.254em;
+}
 .app {
-  width: 60%;
-  height: 80vh;
-  max-width: 900px;
-  max-height: 650px;
-  min-height: 550px;
-  margin: 0 auto;
-  padding: 1em;
+  width: 93%;
+  padding: 1.8em 1.5em;
   display: flex;
   gap: 1em;
   background-color: #ffffff;
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   box-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.09);
-  z-index: 50;
+  z-index: 20;
+}
+.app img {
+  display: block;
+  width: 40px;
 }
 .main {
-  width: 70%;
+  width: 100%;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 100;
+  
 }
 .main_content {
-  width: 75%;
-  height: 85%;
+  width: 100%;
+  padding: 0;
   color: var(--primary-color);
 }
 .main_content h2 {
-  font-size: clamp(1.7rem, 2.5vw, 2rem);
-  margin-top: 1.5vmin;
-  margin-bottom: 0.4em;
+  font-size: clamp(1.58rem, 2.5vw, 2rem);
+  margin-bottom: .3em;
 }
 .space {
   color: var(--color-gray);
-  margin-bottom: 2vmin;
-  font-size: 1rem;
-  /* font-size: clamp(0.8rem, 1vw, 1rem); */
+  margin-bottom: 1.5em;
+  font-size: .95rem;
+  line-height: 23px;
 }

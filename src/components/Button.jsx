@@ -14,12 +14,15 @@ export default function Button() {
     if (location.pathname === '/') {
       setIsFirstPage(true);
       setIsThanksPage(false);
+      setIsLastPage(false);
     } else if (location.pathname === '/summary') {
       setIsLastPage(true);
       setIsThanksPage(false);
       setIsFirstPage(false);
     } else if (location.pathname === '/thanks-page') {
       setIsThanksPage(true);
+      setIsLastPage(false);
+      setIsFirstPage(false);
     } else {
       setIsLastPage(false);
       setIsFirstPage(false);

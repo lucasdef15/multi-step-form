@@ -1,10 +1,11 @@
 :root {
-  --primary-color: #112f56;
+  --primary-color: #002a5c;
+  --color-purple: #544c97;
   --secondary-color: #bee1ff;
   --light-color: #fafafc;
-  --color-gray: #7271718a;
-  --light-color-blue: #112f5610;
-  --light-color-gray: #bccae4;
+  --color-gray: #9898a2;
+  --light-color-blue: #f8f9ff;
+  --light-color-gray: #dbdadf;
 }
 @font-face {
   font-family: "Ubunto";
@@ -33,112 +34,97 @@
 body {
   width: 100%;
 }
-
+input:-ms-input-placeholder,
+input::-ms-input-placeholder {
+  color: var(--light-color-gray) !important;
+  opacity: .5;
+}
+input::placeholder{
+  color: var(--color-gray) !important;
+}
 #root {
-  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
-  place-items: center;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
   background-color: #eef5ff;
-  /* overflow-y: scroll; */
 }
-@media (max-width: 70em) {
-  .app {
-    width: 80%;
-    padding: 0.5em;
-  }
-  .main {
-    width: 100%;
-  }
-  .navBar {
-    padding-left: 4.5vw;
-  }
-  .steps {
-    margin-left: 15%;
-  }
-}
-@media (max-width: 50em) {
-  .app {
-    gap: 0;
-  }
-  .plans {
-    display: flex;
-    flex-direction: column;
-  }
-  .category {
-    display: flex;
-  }
-  .main_content {
-    width: 90%;
-    height: 100%;
-    padding-bottom: 2em;
-    overflow-x: hidden;
-  }
-  .buttons {
-    width: 90%;
-  }
-  .addOn {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  img{
-    display: block;
-    width: 45px;
-  }
-}
-@media (max-width: 40em) {
+@media (min-width: 700px) {
   #root {
     display: grid;
     place-content: center;
   }
   .app {
-    margin: 20%;
-    flex-direction: column;
-    width: 92%;
-    height: auto;
-    min-height: 500px;
-    padding: 1em;
-    /* margin-bottom: 7em; */
+    width: 70vw;
+    height: 50vw;
+    min-height: 550px;
+    min-width: 700px;
+    max-width: 950px;
+    max-height: 625px;
+    padding: .8em;
   }
-  .mobile {
-    display: flex;
-  }
-  .navBar {
-    display: none;
-  }
-  /* .active::before {
-    content: counter(mobile);
-    counter-increment: mobile;
-    width: 40px;
-    height: 40px;
-    left: -5vw;
-    top: -50px;
-  } */
   .main {
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5em;
   }
   .main_content {
-    height: auto;
-  }
-  .plans {
+    width: 73%;
     display: flex;
     flex-direction: column;
-    margin-top: 2em;
-  }
-  .category {
-    display: flex;
-    gap: 1em;
-  }
-  .buttons {
-    display: none;
+    gap: 2em;
   }
   .buttonsMobile {
-    z-index: 200;
+    display: none;
+  }
+  .mobile{
+    display: none;
+  }
+  .space {
+    margin-bottom: 0;
+  }
+  .background-mobile{
+    display: none;
+  }
+  .navBar {
+    display: flex;
+  }
+  .buttons{
+    display: flex;
+  }
+  .personal-input {
+    padding: .8em 1em;
+    margin-bottom: 1.3em;
+  }
+  .plans {
+    flex-direction: row;
+    gap: 1em;
+    margin: 0;
+  }
+  .category {
+    flex-direction: column;
+    gap: 2.78em;
+  }
+  .category_body {
+    gap: .4em;
   }
   .addOn {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    padding: 1.5em 1em;
   }
-  
+  .addOn-description {
+    font-size: .9rem;
+  }
+  .total-summary {
+    padding-top: 0;
+  }
+  .thanksPage {
+    width: 70%;
+    height: 100%;
+  }
+  .goBack {
+    padding: 0;
+  }
 }

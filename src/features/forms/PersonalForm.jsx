@@ -3,10 +3,12 @@ import '../../styles/PersonalForm.css';
 export default function PersonalForm() {
   return (
     <section className='main_content'>
-      <h2>Personal info</h2>
-      <p className='space'>
-        Please provide your name, email address, and phone number.
-      </p>
+      <div>
+        <h2>Personal info</h2>
+        <p className='space'>
+          Please provide your name, email address, and phone number.
+        </p>
+      </div>
 
       <form className='personal-form'>
         <label htmlFor='fullName'>Name</label>

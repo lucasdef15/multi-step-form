@@ -9,13 +9,15 @@ import '../styles/NavBarMD.css';
 export default function FormLayout() {
   return (
     <>
-      <NavBarMobile />
-      <div className='app'>
-        <NavBarDesktop />
-        <main className='main'>
-          <Outlet />
-          <Button />
-        </main>
+      <div className='container'>
+        <NavBarMobile />
+        <div className='app'>
+          <NavBarDesktop />
+          <main className='main'>
+            <Outlet />
+            <Button />
+          </main>
+        </div>
       </div>
       <ButtonsMobile />
     </>

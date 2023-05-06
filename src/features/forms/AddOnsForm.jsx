@@ -22,8 +22,10 @@ export default function AddOnsForm() {
 
   return (
     <section className='main_content'>
-      <h2>Pick add-ons</h2>
-      <p className='space'>Add-ons help enhance your gaming experience.</p>
+      <div>
+        <h2>Pick add-ons</h2>
+        <p className='space'>Add-ons help enhance your gaming experience.</p>
+      </div>
 
       <AddOns addOns={addOns} payment={payment} onChangeCheck={onChangeCheck} />
     </section>

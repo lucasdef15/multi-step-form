@@ -9,7 +9,7 @@ export default function PaymentToggle({ payment, onChange }) {
         <input type='checkbox' checked={payment} onChange={onChange} />
         <span className='slider round'></span>
       </label>
-      <span style={{ color: payment ? '#112f56' : '#727171da' }}>Yearly</span>
+      <span style={{ color: payment ? '#112f56' : '#9898a2' }}>Yearly</span>
     </section>
   );
 }

@@ -1,16 +1,19 @@
 .thanksPage {
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 1em;
-    
+    line-height: 23px;
+    font-size: 1.0125rem;
+    padding: 2.5em 0;
 }
 .thanksPage img{
     display: block;
-    width: 75px;
+    width: 100%;
+    min-width: 55px;
     margin-bottom: 1em;
 }
 .thanksPage p{
