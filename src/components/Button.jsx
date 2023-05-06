@@ -55,14 +55,14 @@ export default function Button() {
 
   return (
     <section
-      className='buttons'
+      className="buttons"
       style={{
         justifyContent: isFirstPage ? 'flex-end' : 'space-between',
         display: isThanksPage ? 'none' : null,
       }}
     >
       <button
-        className='goBack btn'
+        className="goBack btn"
         style={{ display: isFirstPage ? 'none' : 'block' }}
         onClick={goBack}
       >
@@ -70,7 +70,8 @@ export default function Button() {
       </button>
       <button
         className={isLastPage ? 'btn submit' : 'btn'}
-        onClick={isLastPage ? handleThankPage : goNext}
+        type={isFirstPage ? 'submit' : null}
+        onClick={isFirstPage ? null : isLastPage ? handleThankPage : goNext}
       >
         {isLastPage ? 'Confimr' : 'Next Step'}
       </button>
