@@ -18,18 +18,18 @@
 }
 .category_body {
   display: grid;
-  gap: 0.3vw;
+  gap: 0.2em !important;
 }
 .category_body h4 {
-  font-weight: bold;
+  font-weight: 600;
 }
 .category_body p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
-.blue {
+.plan_blue {
   color: var(--primary-color) !important;
   font-weight: normal;
-  font-size: 0.95rem;
+  font-size: 0.85rem !important;
 }
 .payment {
   color: var(--color-gray);

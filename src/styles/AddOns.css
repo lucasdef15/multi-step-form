@@ -34,17 +34,16 @@
 .addOn-title {
   color: var(--primary-color);
   font-weight: bold;
-  /* font-size: 1rem; */
 }
 .addOn-description {
   color: var(--color-gray);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 .addOn-payment {
   color: #463ced;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-.addOn input[type="checkbox"] {
+.addOn input[type='checkbox'] {
   /* Hide the default checkbox */
   position: relative;
   -webkit-appearance: none;
@@ -58,17 +57,17 @@
   display: grid;
   place-content: center;
 }
-.addOn input[type="checkbox"]:after {
-  font-family: "Font Awesome 6 Free";
+.addOn input[type='checkbox']:after {
+  font-family: 'Font Awesome 6 Free';
   font-weight: 900;
-  content: "\f00c";
+  content: '\f00c';
   color: var(--light-color);
   font-size: 0.8rem;
   display: none;
 }
-.addOn input[type="checkbox"]:checked {
+.addOn input[type='checkbox']:checked {
   background-color: #463ced;
 }
-.addOn input[type="checkbox"]:checked:after {
+.addOn input[type='checkbox']:checked:after {
   display: block;
 }

@@ -11,14 +11,12 @@ import '../../styles/PersonalForm.css';
 
 const schema = Yup.object().shape({
   fullName: Yup.string()
-    .matches(fullNameRegExp, 'Invalid name')
-    .required('Full Name is required'),
-  email: Yup.string()
-    .email('Must be a valid email')
-    .required('Email is required'),
+    .required('This field is required')
+    .matches(fullNameRegExp, 'Invalid name'),
+  email: Yup.string().required('This field is required').email('Invalid email'),
   phoneNumber: Yup.string()
-    .matches(phoneRegExp, 'Phone number is not valid')
-    .required('Phone number is required'),
+    .required('This field is required')
+    .matches(phoneRegExp, 'Invalid phone number'),
 });
 
 export default function PersonalForm() {
