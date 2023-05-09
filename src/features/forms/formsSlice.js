@@ -3,6 +3,9 @@ import {
   calculateMonthlyPrice,
   calculateYearlyPrice,
 } from '../../utils/utilities';
+import arcadeIcon from '../../assets/images/icon-arcade.svg';
+import advancedIcon from '../../assets/images/icon-advanced.svg';
+import proIcon from '../../assets/images/icon-pro.svg';
 
 const plans = [
   {
@@ -10,21 +13,21 @@ const plans = [
     category: 'Arcade',
     price: 9,
     selected: false,
-    img: 'https://bucolic-sunburst-e006de.netlify.app/src/assets/images/icon-arcade.svg',
+    img: arcadeIcon,
   },
   {
     id: nanoid(),
     category: 'Advanced',
     price: 12,
     selected: false,
-    img: 'https://bucolic-sunburst-e006de.netlify.app/src/assets/images/icon-advanced.svg',
+    img: advancedIcon,
   },
   {
     id: nanoid(),
     category: 'Pro',
     price: 15,
     selected: false,
-    img: 'https://bucolic-sunburst-e006de.netlify.app/src/assets/images/icon-pro.svg',
+    img: proIcon,
   },
 ];
 
