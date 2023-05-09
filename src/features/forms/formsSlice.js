@@ -10,21 +10,21 @@ const plans = [
     category: 'Arcade',
     price: 9,
     selected: false,
-    img: '/src/assets/images/icon-arcade.svg',
+    img: '../../assets/images/icon-arcade.svg',
   },
   {
     id: nanoid(),
     category: 'Advanced',
     price: 12,
     selected: false,
-    img: '/src/assets/images/icon-advanced.svg',
+    img: '../../assets/images/icon-advanced.svg',
   },
   {
     id: nanoid(),
     category: 'Pro',
     price: 15,
     selected: false,
-    img: '/src/assets/images/icon-pro.svg',
+    img: '../../assets/images/icon-pro.svg',
   },
 ];
 
