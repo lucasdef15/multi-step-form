@@ -56,6 +56,11 @@ const initialState = {
   payment: false,
   plans,
   addOns,
+  personalInfo: {
+    fullName: '',
+    email: '',
+    phoneNumber: '',
+  },
 };
 
 const formsSlice = createSlice({
@@ -119,13 +124,20 @@ const formsSlice = createSlice({
         };
       },
     },
+    changePersonalInfo: {
+      reducer(state, action) {
+        state.personalInfo = action.payload;
+      },
+    },
   },
 });
 
 export const selectAllPlans = (state) => state.forms.plans;
 export const selectPayment = (state) => state.forms.payment;
 export const selectAllAddOns = (state) => state.forms.addOns;
+export const selectPersonalInfo = (state) => state.forms.personalInfo;
 
-export const { addPlan, addPayment, addAddOns } = formsSlice.actions;
+export const { addPlan, addPayment, addAddOns, changePersonalInfo } =
+  formsSlice.actions;
 
 export default formsSlice.reducer;

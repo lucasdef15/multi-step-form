@@ -4,6 +4,7 @@
 .navBar {
   width: 35vw;
   max-width: 300px;
+  min-width: 220px;
   border-radius: .7em;
   background-image: url(../assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;

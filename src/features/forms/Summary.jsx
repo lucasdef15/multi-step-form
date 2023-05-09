@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import { selectAllPlans, selectPayment, selectAllAddOns } from './formsSlice';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Button from '../../components/Button';
 import '../../styles/Summary.css';
 
 export default function Summary() {
@@ -11,6 +12,8 @@ export default function Summary() {
 
   let planContent = plans.find((plan) => plan.selected === true);
   let addOnContent = addOns.filter((addOn) => addOn.selected === true);
+
+  const navigate = useNavigate();
 
   function renderPlan() {
     if (planContent === undefined && addOnContent.length === 0) {
@@ -31,12 +34,12 @@ export default function Summary() {
       );
     } else {
       return (
-        <div className='plan_summary'>
+        <div className="plan_summary">
           <div>
             <h4>{`${planContent.category} (${
               payment ? 'Yearly' : 'Monthly'
             })`}</h4>
-            <Link to='/select-plan'>Change</Link>
+            <Link to="/select-plan">Change</Link>
           </div>
           <div>
             <p>{`$${planContent.price}/${payment ? 'yr' : 'mo'}`}</p>
@@ -53,7 +56,7 @@ export default function Summary() {
 
     return addOnContent.map((addOn) => {
       return (
-        <div key={addOn.id} className='addOn-summary'>
+        <div key={addOn.id} className="addOn-summary">
           <h5>{addOn.service}</h5>
           <p>{`+$${addOn.price}/${payment ? 'yr' : 'mo'}`}</p>
         </div>
@@ -74,26 +77,34 @@ export default function Summary() {
     }
 
     return (
-      <div className='total-summary'>
+      <div className="total-summary">
         <h6>{`Total ${payment ? '(per year)' : '(per month)'}`}</h6>
         <p>{`+$${totalAddOns + totalPlan}/${payment ? 'yr' : 'mo'}`}</p>
       </div>
     );
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/thanks-page');
+  };
+
   return (
-    <section className='main_content'>
+    <section className="main_content">
       <div>
         <h2>Finishing up</h2>
-        <p className='space'>
+        <p className="space">
           Double-check everything looks OK before cofirming.
         </p>
       </div>
-      <section className='summary'>
-        {renderPlan()}
-        {renderAddOnd()}
-      </section>
-      {renderTotal()}
+      <form className="content" onSubmit={handleSubmit}>
+        <section className="summary">
+          {renderPlan()}
+          {renderAddOnd()}
+        </section>
+        {renderTotal()}
+        <Button />
+      </form>
     </section>
   );
 }

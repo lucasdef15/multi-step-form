@@ -1,6 +1,5 @@
 .container{
   width: 100%;
-  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,6 +14,7 @@
   background-color: #ffffff;
   border-radius: 0.5em;
   box-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.09);
+  margin-bottom: 35%;
   z-index: 20;
 }
 .app img {

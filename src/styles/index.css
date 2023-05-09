@@ -8,18 +8,18 @@
   --light-color-gray: #dbdadf;
 }
 @font-face {
-  font-family: "Ubunto";
-  src: url("/src/assets/fonts/Ubuntu-Bold.ttf") format(truetype);
+  font-family: 'Ubunto';
+  src: url('/src/assets/fonts/Ubuntu-Bold.ttf') format(truetype);
   font-weight: bold;
 }
 @font-face {
-  font-family: "Ubunto";
-  src: url("/src/assets/fonts/Ubuntu-Medium.ttf") format(truetype);
+  font-family: 'Ubunto';
+  src: url('/src/assets/fonts/Ubuntu-Medium.ttf') format(truetype);
   font-weight: 600;
 }
 @font-face {
-  font-family: "Ubunto";
-  src: url("/src/assets/fonts/Ubuntu-Regular.ttf") format(truetype);
+  font-family: 'Ubunto';
+  src: url('/src/assets/fonts/Ubuntu-Regular.ttf') format(truetype);
   font-weight: normal;
 }
 *,
@@ -28,7 +28,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ubunto", sans-serif;
+  font-family: 'Ubunto', sans-serif;
 }
 
 body {
@@ -36,21 +36,37 @@ body {
 }
 input:-ms-input-placeholder,
 input::-ms-input-placeholder {
-  color: var(--light-color-gray) !important;
-  opacity: .5;
+  color: var(--light-color-gray);
+  opacity: 0.5;
 }
-input::placeholder{
+input::placeholder {
   color: var(--color-gray) !important;
 }
 #root {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 1em;
   background-color: #eef5ff;
+}
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.error{
+  text-align: right;
+  color: tomato;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 700px) {
   #root {
@@ -63,8 +79,9 @@ input::placeholder{
     min-height: 550px;
     min-width: 700px;
     max-width: 950px;
-    max-height: 625px;
-    padding: .8em;
+    max-height: 630px;
+    padding: 0.8em;
+    margin: 0;
   }
   .main {
     justify-content: space-between;
@@ -73,30 +90,36 @@ input::placeholder{
   }
   .main_content {
     width: 73%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 2em;
   }
-  .buttonsMobile {
-    display: none;
-  }
-  .mobile{
+  .mobile {
     display: none;
   }
   .space {
     margin-bottom: 0;
   }
-  .background-mobile{
+  .background-mobile {
     display: none;
   }
   .navBar {
     display: flex;
   }
   .buttons{
+    position: inherit;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.2em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
   .personal-input {
-    padding: .8em 1em;
+    padding: 0.8em 1em;
     margin-bottom: 1.3em;
   }
   .plans {
@@ -106,16 +129,16 @@ input::placeholder{
   }
   .category {
     flex-direction: column;
-    gap: 2.78em;
+    gap: 3em;
   }
   .category_body {
-    gap: .4em;
+    gap: 0.4em;
   }
   .addOn {
-    padding: 1.5em 1em;
+    padding: 1.3em 1em;
   }
   .addOn-description {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .total-summary {
     padding-top: 0;
