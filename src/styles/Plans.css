@@ -30,6 +30,7 @@
   color: var(--primary-color) !important;
   font-weight: normal;
   font-size: 0.85rem !important;
+  animation: rightAnimation 0.5s ease-in-out;
 }
 .payment {
   color: var(--color-gray);

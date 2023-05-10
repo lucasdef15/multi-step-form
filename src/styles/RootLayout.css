@@ -28,13 +28,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 100;
-  
+  z-index: 100;  
 }
 .main_content {
   width: 100%;
   padding: 0;
   color: var(--primary-color);
+  animation: leftAnimation 0.5s ease-in-out;
 }
 .main_content h2 {
   font-size: clamp(1.58rem, 2.5vw, 2rem);

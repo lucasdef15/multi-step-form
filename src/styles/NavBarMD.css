@@ -12,6 +12,7 @@
   background-size: cover;
   display: none;
   padding-top: 1.5em;
+  animation: mainAnimation .5s ease-in-out;
 }
 .navBar ol {
   width: 90%;
@@ -79,11 +80,13 @@
   display: flex;
   gap: 1em;
   margin-top: 8%;
+  animation: rightAnimation .5s ease-in-out;
 }
 .background-mobile {
   position: absolute;
   width: 100%;
   top: 0;
+  animation: rightAnimation .5s ease-in-out;
 }
 .navLink_mobile {
   width: 35px;

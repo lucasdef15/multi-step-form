@@ -67,6 +67,42 @@ input::placeholder {
   font-weight: bold;
   margin: 0;
   padding: 0;
+  animation: mainAnimation 0.5s ease-in-out;
+}
+main{
+  animation: mainAnimation .5s ease-in-out;
+}
+@media(min-width: 43.75rem) {
+
+  @keyframes mainAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    } to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes leftAnimation {
+    from {
+      transform: translateX(-4%);
+      opacity: 0;
+    } to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes rightAnimation {
+    from {
+      transform: translateX(3%);
+      opacity: 0;
+    } to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
 }
 @media (min-width: 700px) {
   #root {
@@ -77,7 +113,7 @@ input::placeholder {
     width: 100vw;
     height: 100vw;
     max-width: 920px;
-    max-height: 570px;
+    max-height: 580px;
     padding: 0.8em;
     margin: 0;
   }
@@ -93,6 +129,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    animation: rightAnimation .5s ease-in-out;
   }
   .mobile {
     display: none;
@@ -116,6 +153,7 @@ input::placeholder {
     position: absolute;
     left: 0;
     bottom: -18px;
+    animation: rightAnimation .5s ease-in-out;
   }
   .personal-input {
     padding: 0.8em 1em;
@@ -125,6 +163,7 @@ input::placeholder {
     flex-direction: row;
     gap: 1em;
     margin: 0;
+    animation: rightAnimation .5s ease-in-out;
   }
   .category {
     flex-direction: column;
@@ -155,10 +194,25 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    animation: rightAnimation .5s ease-in-out;
   }
   .category {
     flex-direction: row;
     gap: 1em;
     padding: 0.5em;
+    animation: leftAnimation .5s ease-in-out;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

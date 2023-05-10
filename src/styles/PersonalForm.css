@@ -19,21 +19,20 @@
   margin-bottom: 1em;
   margin-top: 0.3em;
 }
-.errorBorder {
-  outline: none;
-  border: 1px solid tomato;
-}
-.noErrors {
-  outline: none;
-  border: 1px solid limegreen;
-}
-
 .personal-input:focus,
 .personal-input:focus-visible,
 .personal-input:focus-within {
   outline: 1.5px solid var(--primary-color);
 }
-
+.errorBorder {
+  outline: none;
+  border: 1px solid tomato;
+}
+.errorBorder:focus,
+.errorBorder:focus-visible,
+.errorBorder:focus-within {
+  outline: none;
+}
 .personalInfoError {
   position: relative;
   top: -85px;
