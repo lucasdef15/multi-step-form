@@ -59,6 +59,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  animation: rightAnimation .5s ease-in-out;
 }
 .error {
   text-align: right;

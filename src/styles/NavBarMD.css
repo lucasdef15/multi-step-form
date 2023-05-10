@@ -12,7 +12,6 @@
   background-size: cover;
   display: none;
   padding-top: 1.5em;
-  animation: mainAnimation .5s ease-in-out;
 }
 .navBar ol {
   width: 90%;
@@ -53,6 +52,8 @@
   place-content: center;
   left: -3.3rem;
   top: -20px;
+  transition: background-color 350ms ease-in-out;
+  transition: color 150ms linear;
 }
 .active {
   position: relative;
@@ -73,6 +74,8 @@
   place-content: center;
   left: -3.3rem;
   top: -20px;
+  transition: background-color 350ms ease-in-out;
+  transition: color 150ms linear;
 }
 
 /* Navlink mobile */
@@ -80,13 +83,11 @@
   display: flex;
   gap: 1em;
   margin-top: 8%;
-  animation: rightAnimation .5s ease-in-out;
 }
 .background-mobile {
   position: absolute;
   width: 100%;
   top: 0;
-  animation: rightAnimation .5s ease-in-out;
 }
 .navLink_mobile {
   width: 35px;
@@ -99,6 +100,8 @@
   text-decoration: none;
   font-weight: 600;
   z-index: 2;
+  transition: background-color 350ms ease-in-out;
+  transition: color 150ms linear;
 }
 .active_mobile {
   width: 35px;
@@ -112,4 +115,6 @@
   text-decoration: none;
   font-weight: 600;
   z-index: 2;
+  transition: background-color 350ms ease-in-out;
+  transition: color 150ms linear;
 }
